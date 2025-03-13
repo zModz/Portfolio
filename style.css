@@ -1,0 +1,547 @@
+@font-face {
+  font-family: "Futura";
+  src: url("./fonts/futura/unicode.futurab.ttf") format("truetype"),
+    local("Futura");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/roboto/Roboto-VariableFont_wdth\,wght.ttf")
+      format("truetype"),
+    local("Roboto");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 90%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bi {
+  margin-inline: 5px;
+
+  font-size: 30px;
+  transition: color 0.5s;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 10vh;
+}
+
+#hamMenu {
+  display: none;
+  color: white;
+  margin-inline: 5px;
+}
+
+#logo {
+  margin: 0;
+  margin-inline: 2%;
+  color: white;
+  font-family: Futura, sans-serif;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 70%;
+  font-family: Roboto, sans-serif;
+}
+
+#menu a {
+  font-size: larger;
+  margin-inline: 1%;
+  color: white;
+  text-decoration: none;
+  transition: font-size 0.5s, color 0.5s;
+}
+
+#menu a:hover {
+  font-size: 25px;
+  color: #666666;
+}
+
+#hireBtn {
+  margin-inline: 2%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 0;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  padding: 15px;
+  font-family: Roboto, sans-serif;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #262626;
+  border: 1px solid white;
+  color: white;
+}
+
+.cxMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: fit-content;
+
+  margin: 5px;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: #262626;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#cxRight {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+#persona {
+  width: 30%;
+}
+
+#desc {
+  padding: 30px;
+  height: 50vh;
+}
+
+#desc p {
+  color: white;
+  margin-block: 1%;
+  font-family: Roboto, sans-serif;
+  font-size: 35pt;
+}
+
+#desc span {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 15pt;
+  font-style: italic;
+  align-self: flex-start;
+}
+
+#tech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(38, 38, 38); /* Light gray background */
+  padding: 20px;
+}
+
+#tech img {
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+}
+
+#techTitle {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 35pt;
+  margin: 0;
+  align-self: flex-start;
+}
+
+#personaImg {
+  background-color: cadetblue;
+  width: 400px;
+  height: 400px;
+}
+
+#persona h1 {
+  color: white;
+  margin: 2%;
+  font-size: 28pt;
+  font-family: Roboto, sans-serif;
+}
+
+#persona h1 > p {
+  color: white;
+  display: inline-block;
+  margin: 0;
+  font-family: Futura, sans-serif;
+}
+
+#persona .smallDesc {
+  color: white;
+  margin: 0;
+  width: 80%;
+  font-size: 20pt;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+}
+
+.cxLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#socials {
+  margin: 5%;
+  gap: 10px;
+}
+
+.boxLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  width: 72px;
+  color: white;
+  border: 1px solid #313131;
+  border-radius: 15px;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+
+#socials a:hover {
+  background-color: white;
+  border-color: white;
+  & > .bi {
+    color: #262626;
+  }
+}
+
+#availability {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
+  width: 100%;
+  height: 20%;
+  margin-block: 2%;
+}
+
+#availability p {
+  font-size: 12pt;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  color: white;
+}
+
+#availability span {
+  width: 20px;
+  height: 20px;
+  margin: 0.5%;
+  background-color: green;
+  border-radius: 50%;
+}
+
+#downloadBtn {
+  align-self: flex-start;
+  margin-block: 2px;
+}
+
+#desc .btn > .bi {
+  margin-inline: 5px;
+}
+
+.slider {
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+  &::after,
+  &::before {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(38, 38, 38, 1) 100%
+    );
+    content: "";
+    position: absolute;
+    height: 223px;
+    width: 150px;
+    z-index: 2;
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+  }
+}
+
+.slideTrack {
+  display: flex;
+  width: calc(100px * 12);
+  will-change: transform;
+  animation: "scroll" 10s linear infinite;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+
+  height: 10vh;
+  margin-top: 5%;
+}
+
+footer p {
+  margin: 0.5%;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 15pt;
+}
+
+footer span {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 5pt;
+  font-style: italic;
+}
+
+/* projects.html */
+#currProj {
+  width: 30%;
+  align-items: flex-start;
+}
+
+#currProj .projImg {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#olderProj {
+  width: 70%;
+}
+
+.proj {
+  height: 200px;
+  padding: 15px;
+  justify-content: center;
+  position: relative;
+  align-items: flex-start;
+}
+
+.background {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mask-image: linear-gradient(to left, rgba(26, 26, 26, 1), rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(26, 26, 26, 1),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.projContent {
+  position: relative;
+  z-index: 1;
+}
+
+#currProj .projContent {
+  margin-top: 3%;
+}
+
+.projType {
+  margin: 0;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.projName {
+  margin: 0;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 30pt;
+}
+
+.projDesc {
+  margin-block: 0;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 15pt;
+}
+
+#olderProj .projDesc {
+  width: 80%;
+}
+
+#olderProj .btn {
+  margin: 5px;
+  justify-content: center;
+}
+
+#projLinks {
+  justify-content: flex-start;
+  margin-top: 3%;
+}
+
+.boxLink:hover {
+  background-color: white;
+  border-color: white;
+  & > .bi {
+    color: #262626;
+  }
+}
+
+.iconLink {
+  color: white;
+}
+
+.iconLink:hover .bi {
+  color: #262626;
+}
+
+.projLink {
+  margin-top: 1%;
+}
+
+.projLink .bi {
+  font-size: 20px;
+}
+
+#pzg {
+  background-image: url("./imgs/projs/pgz.jpg");
+}
+
+#flash {
+  background-image: url("./imgs/projs/flash.jpg");
+}
+/* Extras */
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 6));
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  #hamMenu {
+    display: block;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #hireBtn {
+    /* TODO: make it smaller*/
+    font-size: 0;
+    padding: 1px;
+    border-radius: 5px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  #persona,
+  #cxRight,
+  #currProj,
+  #olderProj {
+    width: 100%;
+  }
+
+  #personaImg {
+    background-color: cadetblue;
+    width: 300px;
+    height: 300px;
+  }
+
+  #persona h1 {
+    font-size: 17pt;
+  }
+
+  #persona .smallDesc {
+    width: 100%;
+  }
+
+  #desc,
+  #tech,
+  .proj {
+    width: 100%;
+    height: fit-content;
+  }
+
+  #desc p {
+    font-size: 20pt;
+  }
+
+  #availability {
+    margin-block: 5%;
+  }
+
+  #availability p {
+    font-size: 10pt;
+  }
+
+  #availability span {
+    width: 12px;
+    height: 12px;
+  }
+
+  #downloadBtn {
+    border-radius: 5px;
+  }
+
+  .slider {
+    &::after,
+    &::before {
+      width: 50px;
+    }
+  }
+
+  .slideTrack {
+    display: flex;
+    width: calc(100px * 3);
+    will-change: transform;
+    animation: "scroll" 10s linear infinite;
+  }
+
+  #olderProj .btn {
+    width: 100%;
+  }
+}
