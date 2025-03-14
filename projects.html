@@ -12,6 +12,27 @@
     <title>MODS - Projects</title>
   </head>
   <body>
+    <div id="modal">
+      <div class="bgModal">a</div>
+      <div class="cxModal">
+        <div class="modalContent">
+          <div class="topWindow">
+            <i class="bi bi-youtube"></i>
+            <h1>Video - The Flash</h1>
+            <i id="closeModal" class="bi bi-x-circle-fill"></i>
+          </div>
+          <iframe
+            src="https://www.youtube.com/embed/kA9uBzqm-Bg?si=cBmFl0T_ipqfX5-J"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
     <div id="nav">
       <div id="hamMenu">
         <i class="bi bi-list"></i>
@@ -20,13 +41,10 @@
       <div id="menu">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
-        <a href="#">About</a>
-        <a href="#">Works</a>
-        <a href="#">Contact</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <div id="hireBtn" class="btn">
-        Hire me<i class="bi bi-caret-right-fill"></i>
-      </div>
+      <div id="hireBtn" class="btn">Hire me<i class="bi bi-send"></i></div>
     </div>
 
     <main>
@@ -38,6 +56,10 @@
           <p class="projDesc">Game Management App</p>
           <div id="projLinks" class="cxLinks">
             <a class="boxLink" href="http://"><i class="bi bi-github"></i></a>
+            <a class="boxLink" href="http://"
+              ><i class="bi bi-google-play"></i
+            ></a>
+            <a class="boxLink" href="http://"><i class="bi bi-apple"></i></a>
           </div>
         </div>
       </div>
@@ -53,6 +75,11 @@
               variety of maps based on space exploration, in the year 2051
             </p>
             <div class="projLink">
+              <a class="iconLink" href="http://"><i class="bi bi-steam"></i></a>
+              <a class="iconLink" href="http://"
+                ><i class="bi bi-playstation"></i
+              ></a>
+              <a class="iconLink" href="http://"><i class="bi bi-xbox"></i></a>
               <a class="iconLink" href="http://"
                 ><i class="bi bi-github"></i
               ></a>
@@ -69,7 +96,7 @@
               Flash.
             </p>
             <div class="projLink">
-              <a class="iconLink" href="http://"
+              <a class="iconLink" id="openModal" href="http://"
                 ><i class="bi bi-youtube"></i
               ></a>
             </div>
@@ -82,6 +109,7 @@
             <h1 class="projName">Modsify</h1>
             <p class="projDesc">Music website</p>
             <div class="projLink">
+              <a class="iconLink" href="http://"><i class="bi bi-globe"></i></a>
               <a class="iconLink" href="http://"
                 ><i class="bi bi-github"></i
               ></a>
@@ -92,12 +120,16 @@
           <div id="jandj" class="background"></div>
           <div class="projContent">
             <p class="projType">Game - Unity</p>
-            <h1 class="projName">Jump & Jump</h1>
+            <h1 class="projName">Jump &amp; Jump</h1>
             <p class="projDesc">Infinite jumper</p>
             <div class="projLink">
               <a class="iconLink" href="http://"
                 ><i class="bi bi-github"></i
               ></a>
+              <a class="iconLink" href="http://"
+                ><i class="bi bi-google-play"></i
+              ></a>
+              <a class="iconLink" href="http://"><i class="bi bi-apple"></i></a>
             </div>
           </div>
         </div>
@@ -112,4 +144,5 @@
       <span> © 2025 Leonardo Ramos </span>
     </footer>
   </body>
+  <script src="main.js"></script>
 </html>

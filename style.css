@@ -35,7 +35,7 @@ main {
 .bi {
   margin-inline: 5px;
 
-  font-size: 30px;
+  font-size: 20px;
   transition: color 0.5s;
 }
 
@@ -90,13 +90,17 @@ main {
 .btn {
   display: flex;
   align-items: center;
+
   text-decoration: none;
+  font-family: Roboto, sans-serif;
+
   margin: 0;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 15px;
+
   background-color: white;
   color: black;
-  border-radius: 15px;
-  padding: 15px;
-  font-family: Roboto, sans-serif;
   transition: all 0.5s;
 }
 
@@ -133,7 +137,6 @@ main {
 
 #desc {
   padding: 30px;
-  height: 50vh;
 }
 
 #desc p {
@@ -174,15 +177,19 @@ main {
 }
 
 #personaImg {
-  background-color: cadetblue;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
+}
+
+#personaImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 #persona h1 {
   color: white;
   margin: 2%;
-  font-size: 28pt;
   font-family: Roboto, sans-serif;
 }
 
@@ -207,6 +214,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #socials {
@@ -272,6 +280,7 @@ main {
   flex-direction: row;
   overflow: hidden;
   position: relative;
+  width: 100%;
   &::after,
   &::before {
     background: linear-gradient(
@@ -300,7 +309,8 @@ main {
 
 .slideTrack {
   display: flex;
-  width: calc(100px * 12);
+  flex: 1;
+  /* width: calc(100px * 12); */
   will-change: transform;
   animation: "scroll" 10s linear infinite;
 }
@@ -413,6 +423,7 @@ footer span {
 #projLinks {
   justify-content: flex-start;
   margin-top: 3%;
+  gap: 10px;
 }
 
 .boxLink:hover {
@@ -428,7 +439,7 @@ footer span {
 }
 
 .iconLink:hover .bi {
-  color: #262626;
+  color: #868686;
 }
 
 .projLink {
@@ -446,6 +457,183 @@ footer span {
 #flash {
   background-image: url("./imgs/projs/flash.jpg");
 }
+
+/* Modal */
+#modal {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.modal-open {
+  overflow-y: hidden;
+}
+
+.bgModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #262626c9;
+  animation: fadeInOpacity 0.5s ease-in-out;
+}
+
+.cxModal {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 50%;
+  width: 50%;
+  padding: 15px;
+  border-radius: 15px;
+
+  background-color: #262626;
+  border: 1px solid white;
+
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.topWindow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.topWindow h1 {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.topWindow .bi,
+.topWindow h1 {
+  font-size: 15px;
+}
+
+.topWindow #closeModal {
+  color: white;
+  transition: color 0.5s;
+}
+
+.topWindow #closeModal:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.modalContent iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* About.html */
+.cxAbout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.abtImg img {
+  border-radius: 15px;
+}
+
+#about {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.abtTxt {
+  padding: 20px;
+}
+
+#about h1 {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 35pt;
+  text-align: end;
+}
+
+#about p {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 20pt;
+  text-align: justify;
+}
+
+#facts {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.fctTitle {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 35pt;
+  margin: 0;
+}
+
+.cxFct {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.cxFct ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cxFct li {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 20pt;
+}
+
+.cxFct dd {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 15pt;
+}
+
+.cxFct a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: white;
+}
+
+.cxFct a:hover {
+  color: #868686;
+  text-decoration: underline;
+}
+
+dd::before {
+  content: "•";
+  color: white;
+  margin-inline: 5px;
+}
+
 /* Extras */
 /* Animation */
 @keyframes scroll {
@@ -454,6 +642,43 @@ footer span {
   }
   100% {
     transform: translateX(calc(-200px * 6));
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  #persona,
+  #cxRight,
+  #currProj,
+  #olderProj {
+    width: 100%;
+  }
+
+  #personaImg {
+    width: 50%;
+    height: 50%;
   }
 }
 
@@ -474,29 +699,17 @@ footer span {
     border-radius: 5px;
   }
 
-  main {
-    flex-direction: column;
-  }
-
-  #persona,
-  #cxRight,
-  #currProj,
-  #olderProj {
-    width: 100%;
-  }
-
-  #personaImg {
-    background-color: cadetblue;
-    width: 300px;
-    height: 300px;
-  }
-
   #persona h1 {
     font-size: 17pt;
   }
 
   #persona .smallDesc {
     width: 100%;
+    font-size: 17px;
+  }
+
+  .cxLinks {
+    flex-wrap: nowrap;
   }
 
   #desc,
