@@ -458,6 +458,14 @@ footer span {
   background-image: url("./imgs/projs/flash.jpg");
 }
 
+#modsify {
+  background-image: url("./imgs/projs/modsify.png");
+}
+
+#jandj {
+  background-image: url("./imgs/projs/jandj.png");
+}
+
 /* Modal */
 #modal {
   display: none;
@@ -546,23 +554,36 @@ footer span {
 /* About.html */
 .cxAbout {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   height: 100vh;
 }
 
+.abtContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.abtImg {
+  width: 250%;
+  height: 250%;
+}
+
 .abtImg img {
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
 }
 
 #about {
-  width: 100%;
+  width: 50%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .abtTxt {
-  padding: 20px;
+  padding: 10px;
 }
 
 #about h1 {
@@ -580,9 +601,9 @@ footer span {
 }
 
 #facts {
+  width: 50%;
   display: flex;
   align-items: flex-start;
-  width: 100%;
 }
 
 .fctTitle {
@@ -634,6 +655,161 @@ dd::before {
   margin-inline: 5px;
 }
 
+/* contact.html */
+#map {
+  width: 30%;
+  align-items: flex-start;
+}
+
+#map .cxMap {
+  width: 100%;
+  height: 100%;
+}
+
+.cxMap iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#map p {
+  color: white;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+#map .underTitle {
+  font-style: italic;
+}
+
+#map .cxEmails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 3%;
+}
+
+#map .cxEmails h2 {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 25pt;
+  margin: 0;
+}
+
+#map .cxEmails p {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: Roboto, sans-serif;
+  padding: 2%;
+}
+
+#map .cxEmails a {
+  color: white;
+  text-decoration: none;
+}
+
+#map .cxEmails a:hover {
+  color: #868686;
+  text-decoration: underline;
+  transition: color 0.5s;
+}
+
+#form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form h1 {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 35pt;
+}
+
+#form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#form form input,
+#form form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  border: 1px solid white;
+  background-color: #262626;
+  color: white;
+}
+
+#form form textarea {
+  resize: none;
+}
+
+#form form input::placeholder,
+#form form textarea::placeholder {
+  color: #868686;
+}
+
+#form form input:focus,
+#form form textarea:focus {
+  border: 1px solid #666666;
+}
+
+#form form .btn {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  font-family: Roboto, sans-serif;
+  transition: all 0.5s;
+}
+
+#form form .btn:hover {
+  cursor: pointer;
+  background-color: #868686;
+  border: 1px solid white;
+  color: white;
+}
+
+/* destino.html */
+#success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  color: white;
+}
+
+#success .bi {
+  font-size: 90pt;
+  color: green;
+}
+
+#success h1 {
+  font-family: Roboto, sans-serif;
+  font-size: 35pt;
+  margin: 1%;
+}
+
+#success p {
+  font-family: Roboto, sans-serif;
+  font-size: 20pt;
+  margin: 0;
+}
+
 /* Extras */
 /* Animation */
 @keyframes scroll {
@@ -664,6 +840,29 @@ dd::before {
 }
 
 /* Media Queries */
+@media screen and (max-width: 1530px) {
+  .abtContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .abtImg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #abtMain {
+    flex-direction: column-reverse;
+  }
+
+  #map,
+  #form {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 800px) {
   main {
     flex-direction: column;
@@ -672,7 +871,9 @@ dd::before {
   #persona,
   #cxRight,
   #currProj,
-  #olderProj {
+  #olderProj,
+  #about,
+  #facts {
     width: 100%;
   }
 
@@ -680,9 +881,12 @@ dd::before {
     width: 50%;
     height: 50%;
   }
+
+  #olderProj .projDesc {
+    font-size: medium;
+  }
 }
 
-/* Media Queries */
 @media screen and (max-width: 768px) {
   #hamMenu {
     display: block;
