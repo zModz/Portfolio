@@ -61,8 +61,7 @@
         </div>
       </div>
       <div id="form" class="cxMain">
-        <!-- <h1>Send me a message</h1> -->
-        <form action="destino.html" method="post">
+        <form action="destino.html" method="">
           <input type="text" name="name" placeholder="Name" />
           <input type="email" name="email" placeholder="Email" />
           <input type="date" name="birthday" id="" />
@@ -73,7 +72,9 @@
             rows="10"
             placeholder="Message"
           ></textarea>
-          <input type="submit" value="Send" class="btn" />
+          <button type="submit" class="btn">
+            Send <i class="bi bi-arrow-right-short"></i>
+          </button>
         </form>
       </div>
     </main>

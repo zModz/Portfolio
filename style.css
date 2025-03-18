@@ -765,6 +765,9 @@ dd::before {
 }
 
 #form form .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 10px;
   margin: 5px;
@@ -778,7 +781,7 @@ dd::before {
 
 #form form .btn:hover {
   cursor: pointer;
-  background-color: #868686;
+  background-color: #262626;
   border: 1px solid white;
   color: white;
 }
