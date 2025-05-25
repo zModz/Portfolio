@@ -48,10 +48,76 @@ main {
   height: 10vh;
 }
 
-#hamMenu {
+.hamMenu {
   display: none;
   color: white;
-  margin-inline: 5px;
+  margin-inline: 2%;
+}
+
+.drawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.9);
+  z-index: 10;
+}
+
+.drawer-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #262626;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: Futura, sans-serif;
+  color: white;
+}
+
+.drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drawer-links a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  padding: 20px;
+  border-radius: 10px;
+  border: #666666 1px solid;
+  background-color: #313131;
+}
+
+.drawer-links a:active {
+  background-color: #262626;
+  border: #666666 1px solid;
+}
+
+.drawer-links a .bi {
+  margin-right: 10%;
+  transition: color 0.5s;
+}
+
+.drawer-links a:hover {
+  color: #868686;
 }
 
 #logo {
@@ -154,6 +220,12 @@ main {
   align-self: flex-start;
 }
 
+#desc img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
 #tech {
   display: flex;
   flex-direction: column;
@@ -177,14 +249,48 @@ main {
 }
 
 #personaImg {
-  width: 100%;
-  height: 100%;
+  /* width: 250%; */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #personaImg img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.flip-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.flip-img-front,
+.flip-img-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.flip-img-back {
+  transform: rotateY(180deg);
+}
+
+.flip-img:hover .flip-img-front {
+  transform: rotateY(-180deg);
+}
+
+.flip-img:hover .flip-img-back {
+  transform: rotateY(0deg);
 }
 
 #persona h1 {
@@ -426,11 +532,17 @@ footer span {
   gap: 10px;
 }
 
+.boxLink .bi {
+  color: white;
+  fill: white;
+}
+
 .boxLink:hover {
   background-color: white;
   border-color: white;
   & > .bi {
     color: #262626;
+    fill: #262626;
   }
 }
 
@@ -440,6 +552,7 @@ footer span {
 
 .iconLink:hover .bi {
   color: #868686;
+  fill: #868686;
 }
 
 .projLink {
@@ -567,12 +680,18 @@ footer span {
 
 .abtImg {
   width: 250%;
-  height: 250%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .abtImg img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 15px;
 }
 
@@ -583,7 +702,8 @@ footer span {
 }
 
 .abtTxt {
-  padding: 10px;
+  /* padding: 10px; */
+  font-size: 18pt;
 }
 
 #about h1 {
@@ -596,8 +716,20 @@ footer span {
 #about p {
   color: white;
   font-family: Roboto, sans-serif;
-  font-size: 20pt;
+  font-size: 18pt;
   text-align: justify;
+  padding: 10px;
+}
+
+#about a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+
+#about a:hover {
+  color: #868686;
+  text-decoration: underline;
 }
 
 #facts {
@@ -609,6 +741,7 @@ footer span {
 .fctTitle {
   color: white;
   font-family: Roboto, sans-serif;
+  font-weight: bolder;
   font-size: 35pt;
   margin: 0;
 }
@@ -851,7 +984,10 @@ dd::before {
 
   .abtImg {
     width: 100%;
-    height: 100%;
+  }
+
+  #about h1 {
+    text-align: center;
   }
 }
 
@@ -891,7 +1027,7 @@ dd::before {
 }
 
 @media screen and (max-width: 768px) {
-  #hamMenu {
+  .hamMenu {
     display: block;
   }
 
@@ -963,5 +1099,17 @@ dd::before {
 
   #olderProj .btn {
     width: 100%;
+  }
+
+  .fctTitle {
+    font-size: 25pt;
+  }
+
+  .cxFct li {
+    font-size: 15pt;
+  }
+
+  .cxFct dd {
+    font-size: 12pt;
   }
 }

@@ -18,7 +18,7 @@
   </head>
   <body>
     <div id="nav">
-      <div id="hamMenu">
+      <div class="hamMenu" id="openDrawer">
         <i class="bi bi-list"></i>
       </div>
       <h1 id="logo">MODS</h1>
@@ -28,12 +28,35 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div id="hireBtn" class="btn">Hire me<i class="bi bi-send"></i></div>
+      <a href="contact.html" id="hireBtn" class="btn"
+        >Hire me<i class="bi bi-send"></i
+      ></a>
     </div>
+
+    <div id="drawer" class="drawer">
+      <div class="drawer-content">
+        <div class="drawer-header">
+          <h1>MODS</h1>
+          <i id="closeDrawer" class="bi bi-x-circle-fill"></i>
+        </div>
+        <div class="drawer-links">
+          <a href="index.html"><i class="bi bi-house"></i> Home</a>
+          <a href="projects.html"><i class="bi bi-code-slash"></i> Projects</a>
+          <a href="about.html"><i class="bi bi-person"></i> About</a>
+          <a href="contact.html"> <i class="bi bi-envelope"></i>Contact</a>
+        </div>
+      </div>
+    </div>
+
     <main>
       <div id="persona" class="cxMain">
-        <div id="personaImg">
-          <img src="./imgs/logos/mods_logo.jpg" alt="personaImg" />
+        <div id="personaImg" class="flip-img">
+          <div class="flip-img-front">
+            <img src="./imgs/logos/mods_logo.jpg" alt="personaImg" />
+          </div>
+          <div class="flip-img-back">
+            <img src="./imgs/imgs/leo.png" alt="personaImg" />
+          </div>
         </div>
         <h1>
           Leonardo
@@ -67,6 +90,9 @@
       </div>
       <div id="cxRight">
         <div id="desc" class="cxMain">
+          <!-- <img
+            src="https://www.dropbox.com/s/3so40gz3amtcjrn/youtubeshop.jpg?raw=1"
+          /> -->
           <span>Hello there</span>
           <p>
             I'm a passionate programmer with experience in various programming
@@ -113,4 +139,5 @@
       <span> © 2025 Leonardo Ramos </span>
     </footer>
   </body>
+  <script src="main.js"></script>
 </html>

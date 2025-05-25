@@ -18,7 +18,7 @@
   </head>
   <body>
     <div id="nav">
-      <div id="hamMenu">
+      <div class="hamMenu" id="openDrawer">
         <i class="bi bi-list"></i>
       </div>
       <h1 id="logo">MODS</h1>
@@ -28,43 +28,73 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div id="hireBtn" class="btn">Hire me<i class="bi bi-send"></i></div>
+      <a href="contact.html" id="hireBtn" class="btn"
+        >Hire me<i class="bi bi-send"></i
+      ></a>
+    </div>
+
+    <div id="drawer" class="drawer">
+      <div class="drawer-content">
+        <div class="drawer-header">
+          <h1>MODS</h1>
+          <i id="closeDrawer" class="bi bi-x-circle-fill"></i>
+        </div>
+        <div class="drawer-links">
+          <a href="index.html"><i class="bi bi-house"></i> Home</a>
+          <a href="projects.html"><i class="bi bi-code-slash"></i> Projects</a>
+          <a href="about.html"><i class="bi bi-person"></i> About</a>
+          <a href="contact.html"> <i class="bi bi-envelope"></i>Contact</a>
+        </div>
+      </div>
     </div>
 
     <main>
       <div id="about" class="cxMain">
         <div class="abtContainer">
           <div class="abtImg">
-            <img src="./imgs/imgs/me.jpg" alt="imgLogo" />
+            <img src="./imgs/imgs/leo.png" alt="imgLogo" />
           </div>
           <div class="abtTxt">
             <h1>About Me</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-              fugiat dolor magni ab possimus sint obcaecati eaque hic, tenetur
-              voluptatem exercitationem unde, beatae odio, nostrum iusto est!
-              Provident, illum quam?
+              My name is Leonardo Ramos, and I have been coding since I was 13
+              years old. I started with C# and Unity, but now I am more focused
+              on other languages. I am passionate about game development and
+              programming in general. I love to create new projects and learn
+              new technologies.
             </p>
           </div>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-          fugiat dolor magni ab possimus sint obcaecati eaque hic, tenetur
-          voluptatem exercitationem unde, beatae odio, nostrum iusto est!
-          Provident, illum quam?
+          I am currently working on a project called
+          <a href="https://github.com/zModz/backlogApp">Armory App</a> thats an
+          app that helps you manage your game library. It is built with React
+          and Node.js, and it is available on GitHub. I am also working on a
+          game called
+          <a href="https://github.com/zModz/ProjectZombieGame"
+            >Project: ZombieGame</a
+          >
+          that is a survival game where you have to survive against hordes of
+          zombies. It is built with Unity and C#. I am always looking for new
+          challenges and opportunities to learn and grow as a developer.
         </p>
       </div>
       <div id="facts" class="cxMain">
-        <div class="fctTitle">Fun Facts</div>
+        <div class="fctTitle">At a glance</div>
         <div class="cxFct">
           <ul>
+            <li>👾 Started coding with Unity and C#</li>
             <li>
-              🔭 I’m currently working on porting
-              <a href="">Project: ZombieGame</a> to other game engine
+              🔭 I’m currently working on
+              <a href="https://github.com/zModz/backlogApp">Armory App</a>
             </li>
-            <li>🌱 I’m currently learning <s>Unity</s></li>
-            <dd>F**k you Unity, seriously.</dd>
-            <li>🎮 I'm a gamer at heart</li>
+            <dd>
+              Also working on a
+              <a href="https://github.com/zModz/ProjectZombieGame">game</a> in
+              Unity
+            </dd>
+            <li>🌱 I’m currently learning React Native</li>
+            <li>🎮 Gamer at heart</li>
             <li>⚡ I'm really bad at typing</li>
           </ul>
         </div>
@@ -76,4 +106,5 @@
       <span> © 2025 Leonardo Ramos </span>
     </footer>
   </body>
+  <script src="main.js"></script>
 </html>

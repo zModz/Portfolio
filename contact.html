@@ -18,7 +18,7 @@
   </head>
   <body>
     <div id="nav">
-      <div id="hamMenu">
+      <div class="hamMenu" id="openDrawer">
         <i class="bi bi-list"></i>
       </div>
       <h1 id="logo">MODS</h1>
@@ -28,7 +28,24 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div id="hireBtn" class="btn">Hire me<i class="bi bi-send"></i></div>
+      <a href="contact.html" id="hireBtn" class="btn"
+        >Hire me<i class="bi bi-send"></i
+      ></a>
+    </div>
+
+    <div id="drawer" class="drawer">
+      <div class="drawer-content">
+        <div class="drawer-header">
+          <h1>MODS</h1>
+          <i id="closeDrawer" class="bi bi-x-circle-fill"></i>
+        </div>
+        <div class="drawer-links">
+          <a href="index.html"><i class="bi bi-house"></i> Home</a>
+          <a href="projects.html"><i class="bi bi-code-slash"></i> Projects</a>
+          <a href="about.html"><i class="bi bi-person"></i> About</a>
+          <a href="contact.html"> <i class="bi bi-envelope"></i>Contact</a>
+        </div>
+      </div>
     </div>
 
     <main id="abtMain">
@@ -61,10 +78,10 @@
         </div>
       </div>
       <div id="form" class="cxMain">
-        <form action="destino.html" method="">
+        <!-- <h1>Send me a message</h1> -->
+        <form action="https://formsubmit.co/bbenfica99@gmail.com" method="post">
           <input type="text" name="name" placeholder="Name" />
           <input type="email" name="email" placeholder="Email" />
-          <input type="date" name="birthday" id="" />
           <textarea
             name="message"
             id="message"
@@ -72,9 +89,8 @@
             rows="10"
             placeholder="Message"
           ></textarea>
-          <button type="submit" class="btn">
-            Send <i class="bi bi-arrow-right-short"></i>
-          </button>
+          <input type="submit" value="Send" class="btn" />
+          <input type="hidden" name="_next" value="destino.html" />
         </form>
       </div>
     </main>
@@ -84,4 +100,5 @@
       <span> © 2025 Leonardo Ramos </span>
     </footer>
   </body>
+  <script src="main.js"></script>
 </html>
