@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @font-face {
   font-family: "Futura";
   src: url("./fonts/futura/unicode.futurab.ttf") format("truetype"),
     local("Futura");
 }
 
-@font-face {
+/* @font-face {
   font-family: "Roboto";
   src: url("./fonts/roboto/Roboto-VariableFont.ttf") format("truetype"),
     local("Roboto");
-}
+} */
 
 * {
   box-sizing: border-box;
