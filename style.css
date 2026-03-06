@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: "Futura";
-  src: url("./fonts/futura/unicode.futurab.ttf") format("truetype"),
+  src:
+    url("./fonts/futura/unicode.futurab.ttf") format("truetype"),
     local("Futura");
 }
 
@@ -142,7 +143,9 @@ main {
   margin-inline: 1%;
   color: white;
   text-decoration: none;
-  transition: font-size 0.5s, color 0.5s;
+  transition:
+    font-size 0.5s,
+    color 0.5s;
 }
 
 #menu a:hover {
@@ -337,7 +340,25 @@ main {
   color: white;
   border: 1px solid #313131;
   border-radius: 15px;
-  transition: background-color 0.5s, border-color 0.5s;
+  transition:
+    background-color 0.5s,
+    border-color 0.5s,
+    color 0.5s;
+}
+
+.boxLink.large {
+  width: auto;
+  padding-inline: 20px;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  & > .bi {
+    margin-right: 15px;
+  }
+}
+
+.divider-vertical {
+  width: 1px;
+  background-color: rgba(128, 128, 128, 0.2);
 }
 
 #socials a:hover {
@@ -579,10 +600,28 @@ footer span {
     color: #262626;
     fill: #262626;
   }
+  &.large {
+    color: #262626;
+    fill: #262626;
+  }
 }
 
 .iconLink {
+  display: flex;
   color: white;
+  align-items: center;
+  transition:
+    fill 0.6s,
+    color 0.6s;
+  & > .bi {
+    fill: white;
+  }
+}
+
+.iconLink.inactive {
+  color: grey;
+  pointer-events: all;
+  cursor: default;
 }
 
 .iconLink:hover .bi {
@@ -591,7 +630,11 @@ footer span {
 }
 
 .projLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   margin-top: 1%;
+  gap: 3px;
 }
 
 .projLink .bi {
@@ -979,6 +1022,47 @@ dd::before {
   font-family: Roboto, sans-serif;
   font-size: 20pt;
   margin: 0;
+}
+
+/* https://www.w3schools.com/css/css_tooltip.asp */
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+}
+
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden; /* Hidden by default */
+  width: 130px;
+  top: 110%;
+  left: 9%;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1; /* Ensure tooltip is displayed above content */
+  transition: opacity 1s;
+}
+
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+  transition: opacity 1s;
+}
+
+/* Show the tooltip text on hover */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Extras */
