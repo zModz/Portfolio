@@ -238,7 +238,6 @@ main {
 #tech img {
   width: 100px;
   height: 100px;
-  margin: 50px;
 }
 
 #techTitle {
@@ -420,6 +419,41 @@ main {
   /* width: calc(100px * 12); */
   will-change: transform;
   animation: "scroll" 10s linear infinite;
+}
+
+.langBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  padding: 50px;
+}
+
+.langBox > p {
+  display: none;
+  color: white;
+  font-size: larger;
+  font-family: "Roboto", sans-serif;
+  animation: fadeIn 0.5s;
+}
+
+.langBox:hover img {
+  width: 150px;
+  height: 150px;
+}
+
+.langBox:hover > p {
+  display: block;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 footer {
